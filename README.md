@@ -5,7 +5,31 @@
 This tool is designed to automatically generate a sitemap powered by Sanity CMS with also the need to manage multiple languages.
 It fetches data from Sanity CMS and constructs a sitemap XML file, which is essential for search engine optimization.
 
-[Your final sitemap will look like this.](https://www.valpiccola.com/sitemap.xml)
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <url>
+  <loc>https://www.example.com/it</loc>
+   <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it"/>
+   <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/en"/>
+ </url>
+ <url>
+  <loc>https://www.valpiccola.com/en</loc>
+   <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it"/>
+   <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/en"/>
+ </url>
+ <url>
+  <loc>https://www.example.com/it/uno</loc>
+   <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/uno"/>
+   <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/en/one"/>
+ </url>
+ <url>
+  <loc>https://www.valpiccola.com/en/one</loc>
+   <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/uno"/>
+   <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/en/one"/>
+ </url>
+</urlset>
+```
 
 ## Features
 
@@ -18,12 +42,14 @@ It fetches data from Sanity CMS and constructs a sitemap XML file, which is esse
 Before running the script, make sure to configure the following variables according to your specific requirements:
 Adjust these settings in the script to match the specifics of your website and CMS setup.
 
-### baseUrl: This should be set to the base URL of your website.
+### baseUrl
 
+This should be set to the base URL of your website.
 Example: const baseUrl = 'https://www.example.com';
 
-### docTypes: This array should include all the document types from your Sanity CMS that you want to include in the sitemap.
+### docTypes
 
+This array should include all the document types from your Sanity CMS that you want to include in the sitemap.
 Example: const docTypes = ["page", "business", "author", "blog", "event"];
 
 ## Compatibility and Considerations

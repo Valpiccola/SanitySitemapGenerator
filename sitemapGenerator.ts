@@ -59,10 +59,12 @@ const createSitemapXml = (sanity_data) => {
   // Iterate over each document and its translations
   sanity_data.forEach(sanity_document => {
     sanity_document.translations.forEach(tx => {
+      if (!tx) return;
       if (parsedUrl.has(tx.slug.current)) return;
       parsedUrl.add(tx.slug.current);
       sitemapXml += ` <url>\n  <loc>${baseUrl}${tx.slug.current}</loc>\n`;
       sanity_document.translations.forEach(tx2 => {
+        if (!tx2) return;
         sitemapXml += '   <xhtml:link rel="alternate" hreflang="' + tx2.language + 
               '" href="' + baseUrl + tx2.slug.current + '"/>\n';
       });

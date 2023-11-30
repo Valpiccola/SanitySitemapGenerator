@@ -14,7 +14,7 @@ It fetches data from Sanity CMS and constructs a sitemap XML file, which is esse
    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/en"/>
  </url>
  <url>
-  <loc>https://www.valpiccola.com/en</loc>
+  <loc>https://www.example.com/en</loc>
    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it"/>
    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/en"/>
  </url>

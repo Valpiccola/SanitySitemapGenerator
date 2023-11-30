@@ -13,6 +13,19 @@ It fetches data from Sanity CMS and constructs a sitemap XML file, which is esse
 - Generates a sitemap XML file compatible with search engine requirements.
 - Supports multilingual content for improved global SEO.
 
+## Configuration
+
+Before running the script, make sure to configure the following variables according to your specific requirements:
+Adjust these settings in the script to match the specifics of your website and CMS setup.
+
+### baseUrl: This should be set to the base URL of your website.
+
+Example: const baseUrl = 'https://www.example.com';
+
+### docTypes: This array should include all the document types from your Sanity CMS that you want to include in the sitemap.
+
+Example: const docTypes = ["page", "business", "author", "blog", "event"];
+
 ## Compatibility and Considerations
 
 ### Sanity V3 and Internationalization
